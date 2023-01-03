@@ -21,13 +21,16 @@
             <button class="numberBtn" id="seven" onclick="seven()">7</button>
             <button class="numberBtn" id="eight" onclick="eight()">8</button>
             <button class="numberBtn" id="nine" onclick="nine()">9</button>
+            <button class="numberBtn" id="zero" onclick="zero()">0</button>
             <button class="delete" id="backSpace" onclick="backSpace()">BACKSPACE</button>
             <button class="delete" id="clear" onclick="deleteAllElements()">CLEAR</button>
             <button class="operatorBtn" id="add" onclick ="plus()">+</button>
             <button class="operatorBtn" id="subtract" onclick ="minus()">-</button>
             <button class="operatorBtn" id="multiply" onclick="times()">x</button>
             <button class="operatorBtn" id="divide" onclick="dividedBy()">÷</button>
-            <button id="equals" onclick="equals()">=</button>
+            <button id="equals" onclick="equals(function(result) {
+                display.innerHTML = result;
+            });">=</button>
         </div>
     </div>
     <div id="footer">Made with love on Spring St.</div>
