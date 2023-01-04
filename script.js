@@ -16,22 +16,24 @@ function equals(callback) {
     console.log('equals was pressed!');
     const result = eval(displayValue.join(''));
     callback(result);
+    displayValue.splice(0, displayValue.length);
+    displayValue.push(result);
     }
 
 function backSpace() {
-    let elementsToDelete = document.getElementsByClassName('displayContent');
-    for (let i = elementsToDelete.length - 1; i >= 0; i++) {
-        let elementToDelete = elementsToDelete[i];
-        elementToDelete.remove();
-    }
+    console.log('backspace was pressed!');
+    displayValue.splice(displayValue.length - 1, displayValue.length);
+    console.log(displayValue);
+    let lastChild = display.lastElementChild;
+    display.removeChild(lastChild);
+
 }
 
 function deleteAllElements() {
-    let elementsToDelete = document.getElementsByClassName('displayContent');
-    for (let i = elementsToDelete.length - 1; i >= 0; i--) {
-        let elementToDelete = elementsToDelete[i];
-        elementToDelete.remove();
-    }
+    console.log('clear is pressed!');
+    displayValue.splice(0, displayValue.length);
+    console.log(displayValue);
+    return display.innerHTML = '';
 }
 
 function plus() {
