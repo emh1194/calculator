@@ -1,3 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    min-width: 95vw;
+    min-height: 95vh;
+    color: whitesmoke;
+    text-shadow: 0 0 4px red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#header {
+    font-size: xx-large;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#calculatorBody {
+    background: rgb(82, 80, 80);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px whitesmoke solid;
+    border-radius: 5px;
+    height: 400px;
+    width: 300px;
+}
+
 .display {
     display: flex;
+    background: whitesmoke;
+    border: 1px whitesmoke solid;
+    font-size: xx-large;
+    color: black;
+    border-radius: 5px;
+    height: 50px;
+    width: 250px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-self: center;
+    align-self: center;
+}
+
+.btns {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding-right: 16px;
+    padding-bottom: 16px;
+    
+}
+
+.operatorBtn {
+    background: orange;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+#equals {
+    background: yellow;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+.numberBtn {
+    background-color: rgb(251, 75, 75);
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+.deleteBtns {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding-bottom: 16px;
+
+}
+
+#footer {
+    position: sticky;
+    top: 100%;
 }
