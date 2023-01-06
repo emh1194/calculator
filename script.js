@@ -1,21 +1,13 @@
 let displayValue = [];
 
-const add = (x, y) => x + y;
-
-const subtract = (x, y) => x - y;
-
-const multiply = (x, y) => x * y;
-
-const divide = (x, y) => x / y;
-
-const operate = (operator, x, y) => operator(x, y);
-
 const display = document.querySelector('.display');
 
 function equals(callback) {
     console.log('equals was pressed!');
     const result = eval(displayValue.join(''));
+    
     callback(result);
+    result.classList.add('displayContent');
     displayValue.splice(0, displayValue.length);
     displayValue.push(result);
     }
